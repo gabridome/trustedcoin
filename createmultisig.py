@@ -1,4 +1,15 @@
 #!/usr/bin/python
+#
+# Please don't forget to customize the "contacts" variable with your own references
+#
+#
+# syntax: contacts = [{"email":"email1@somedomain.com"},{"email":"email2@somedomain.com"},{"sms":"+12345678910"},{"web":"https://somecall-back.com"}]
+
+contacts = [{"email":"email1@somedomain.com"},{"email":"email2@somedomain.com"},{"sms":"+12345678910"},{"web":"https://somecall-back.com"}]
+
+if "email1@somedomain.com" in contacts:
+	sys.exit('\n    ah aaaaa! I have caught you!\nPlease edit createmultisig.py and edit the contacts variable\nwith your references.')
+
 import sys
 import requests
 import bitcoin
@@ -9,10 +20,8 @@ from bitcoin.transaction import *
 from bitcoin.bci import *
 from trustedcoin import *
 
-# syntax: contacts = [{"email":"email1@somedomain.com"},{"email":"email2@somedomain.com"},{"sms":"+12345678910"},{"web":"https://somecall-back.com"}]
 
-contacts = [{"email":"gabriele.domenichini@gdtre.net"},{"email":"gabridome@gmail.com"}]
-
+if contacts in 
 if len(sys.argv) <2:
 	policytype = raw_input('Policy type? Latency or approval: ')
 	delay_in_seconds = raw_input('seconds before validating the transaction or to confirm the expense: ')
